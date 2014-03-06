@@ -1,0 +1,30 @@
+{
+  "name": "serf-rpc",
+  "version": "0.1.0",
+  "description": "A simple nodejs module for interacting with the Serf RPC protocol.",
+  "main": "main.js",
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "msgpack-js-v5-ng": "~0.3.0-v5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/normanjoyner/serf-rpc"
+  },
+  "keywords": [
+    "serf",
+    "serf-rpc",
+    "rpc",
+    "api",
+    "serfdom"
+  ],
+  "author": "Norman Joyner <norman.joyner@gmail.com>",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/normanjoyner/serf-rpc/issues"
+  }
+}
