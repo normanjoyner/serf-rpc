@@ -25,7 +25,7 @@ var options = {
     rpc_port: 7070
 }
 
-serf.connect(options, function(){
+serf.connect(options, function(err){
     // interact with the RPC protocol
 });
 ```
@@ -43,7 +43,10 @@ Example using the default RPC address, triggering a custom user event:
 var SerfRPC = require("serf-rpc");
 var serf = new SerfRPC();
 
-serf.connect(function(){
+serf.connect(function(err){
+    if(err)
+        throw err;
+
     serf.event({"Name": "deploy": "Payload": "4f33de567283e4a456539b8dc493ae8a853a93f6", "Coalesece": false}, function(err, response){
         if(err)
             throw err;
