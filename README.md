@@ -35,6 +35,8 @@ serf.connect(options, function(){
 * leave
 * members
 
+For specific details about these operations, consult the [official Serf RPC docs](http://www.serfdom.io/docs/agent/rpc.html).
+
 ###Examples
 Example using the default RPC address, triggering a custom user event:
 ```javascript
