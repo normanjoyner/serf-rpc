@@ -30,6 +30,11 @@ serf.connect(options, function(){
 });
 ```
 
+###Supported Operations
+* event
+* leave
+* members
+
 ###Examples
 Example using the default RPC address, triggering a custom user event:
 ```javascript
