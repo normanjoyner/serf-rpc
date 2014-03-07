@@ -1,0 +1,30 @@
+{
+  "name": "serf-rpc",
+  "version": "0.1.1",
+  "dependencies": {
+    "lodash": {
+      "version": "2.4.1",
+      "from": "lodash@~2.4.1"
+    },
+    "msgpack-js-v5-ng": {
+      "version": "0.3.0-v5",
+      "from": "msgpack-js-v5-ng@~0.3.0-v5",
+      "dependencies": {
+        "bops": {
+          "version": "0.0.7",
+          "from": "bops@~0.0.6",
+          "dependencies": {
+            "base64-js": {
+              "version": "0.0.2",
+              "from": "base64-js@0.0.2"
+            },
+            "to-utf8": {
+              "version": "0.0.1",
+              "from": "to-utf8@0.0.1"
+            }
+          }
+        }
+      }
+    }
+  }
+}
