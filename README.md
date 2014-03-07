@@ -32,6 +32,7 @@ serf.connect(options, function(err){
 
 ###Supported Operations
 * event
+* join
 * leave
 * members
 
