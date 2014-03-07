@@ -48,7 +48,7 @@ serf.connect(function(err){
     if(err)
         throw err;
 
-    serf.event({"Name": "deploy", "Payload": "4f33de567283e4a456539b8dc493ae8a853a93f6", "Coalesece": false}, function(err, response){
+    serf.event({"Name": "deploy", "Payload": "4f33de567283e4a456539b8dc493ae8a853a93f6", "Coalesce": false}, function(err, response){
         if(err)
             throw err;
         else
