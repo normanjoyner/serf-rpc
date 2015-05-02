@@ -23,7 +23,7 @@
     "serfdom"
   ],
   "author": "Norman Joyner <norman.joyner@gmail.com>",
-  "license": "GPLv2",
+  "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/normanjoyner/serf-rpc/issues"
   }
