@@ -1,3 +1,8 @@
+Forked and completed implementation of the serf rpc.
+
+First run a serf agent as described in the serf
+[docs](http://www.serfdom.io/docs/agent/options.html).
+
 serf-rpc
 ====================
 
@@ -30,13 +35,13 @@ serf.connect(options, function(err){
 });
 ```
 
-###Supported Operations
-* event
-* join
-* leave
-* members
+All operations are supported, but not rigorously tested yet.
 
-For specific details about these operations, consult the [official Serf RPC docs](http://www.serfdom.io/docs/agent/rpc.html).
+For specific details about these operations, consult the
+[official Serf RPC docs](http://www.serfdom.io/docs/agent/rpc.html).
+
+There are two more convenience functions, listen and log, easing the use of
+stream and monitor.
 
 ###Examples
 Example using the default RPC address, triggering a custom user event:
@@ -55,4 +60,23 @@ serf.connect(function(err){
             console.log("Triggered the event!");
     });
 });
-```
+
+serf.listen("user", function(data, stop) {
+	console.log('listen event!!', data);
+	// serf.stop();
+	// serf.leave(function(data) { console.log('leaving', data); });
+}); 
+
+serf.listen("query", function(data, stop) {
+	console.log('query event!!', data);
+	serf.respond({ ID: data.ID, Payload: "my response" }, function(err, data) {
+		if(err)
+			console.log("Error", err);
+		else
+			console.log("Response...\n", data);
+
+	});
+});
+````	
+	
+	
