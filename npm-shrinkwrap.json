@@ -1,26 +1,31 @@
 {
   "name": "serf-rpc",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "dependencies": {
     "lodash": {
       "version": "2.4.1",
-      "from": "lodash@~2.4.1"
+      "from": "lodash@2.4.1",
+      "resolved": "https://registry.npmjs.org/lodash/-/lodash-2.4.1.tgz"
     },
     "msgpack-js-v5-ng": {
       "version": "0.3.0-v5",
-      "from": "msgpack-js-v5-ng@~0.3.0-v5",
+      "from": "msgpack-js-v5-ng@0.3.0-v5",
+      "resolved": "https://registry.npmjs.org/msgpack-js-v5-ng/-/msgpack-js-v5-ng-0.3.0-v5.tgz",
       "dependencies": {
         "bops": {
           "version": "0.0.7",
-          "from": "bops@~0.0.6",
+          "from": "bops@0.0.7",
+          "resolved": "https://registry.npmjs.org/bops/-/bops-0.0.7.tgz",
           "dependencies": {
             "base64-js": {
               "version": "0.0.2",
-              "from": "base64-js@0.0.2"
+              "from": "base64-js@0.0.2",
+              "resolved": "https://registry.npmjs.org/base64-js/-/base64-js-0.0.2.tgz"
             },
             "to-utf8": {
               "version": "0.0.1",
-              "from": "to-utf8@0.0.1"
+              "from": "to-utf8@0.0.1",
+              "resolved": "https://registry.npmjs.org/to-utf8/-/to-utf8-0.0.1.tgz"
             }
           }
         }
