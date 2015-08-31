@@ -1,8 +1,3 @@
-Forked and completed implementation of the serf rpc.
-
-First run a serf agent as described in the serf
-[docs](http://www.serfdom.io/docs/agent/options.html).
-
 serf-rpc
 ====================
 
@@ -18,6 +13,11 @@ Norman Joyner - norman.joyner@gmail.com
 
 ###Installation
 ```npm install serf-rpc```
+
+###Prerequisites
+First run a serf agent as described in the serf
+[docs](http://www.serfdom.io/docs/agent/options.html).
+
 
 ###Configuration
 Simply require the serf-rpc module, instantiate a new Serf object, and call the ```.connect()``` method to start interacting with Serf's RPC protocol.
@@ -65,7 +65,7 @@ serf.listen("user", function(data, stop) {
 	console.log('listen event!!', data);
 	// serf.stop();
 	// serf.leave(function(data) { console.log('leaving', data); });
-}); 
+});
 
 serf.listen("query", function(data, stop) {
 	console.log('query event!!', data);
@@ -77,6 +77,4 @@ serf.listen("query", function(data, stop) {
 
 	});
 });
-````	
-	
-	
+```
