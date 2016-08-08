@@ -69,7 +69,9 @@ serf.listen("member-join,member-update", (data, stopFn) => {
 // Stop listening after 5 seconds.
 setTimeout(() => {
     // Test if function is defined in case it takes a long time to subscribe.
-    if (memberJoinStopFn) memberJoinStopFn();
+    if (memberJoinStopFn) {
+        memberJoinStopFn(function () { serf.disconnect(); });
+    } else serf.disconnect();
 }, 5000);
 
 // -Or-
@@ -80,6 +82,11 @@ try {
     console.log("Error subscribing to event", e);
 }
 ```
+
+#### serf.disconnect()
+Disconnects from the serf agent. If this is not called, then node.js will not exit because
+the underlying socket will remain open. That is to say, you must call this to close the
+underlying socket so that node.js may gracefully exit.
 
 ###Examples
 Example using the default RPC address, triggering a custom user event:
