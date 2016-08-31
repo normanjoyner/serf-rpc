@@ -35,7 +35,10 @@ serf.connect(options, function(err){
 });
 ```
 
-All operations are supported, but not rigorously tested yet.
+All operations listed in the [Serf RPC docs](https://www.serf.io/docs/agent/rpc.html)
+are supported, but not all are rigorously tested yet. Methods with dashes in their names
+can either be called using bracket notation (e.g. `serf['members-filtered']`) or using
+their camel-cased aliases (e.g.`serf.membersFiltered(...)`).
 
 For specific details about these operations, consult the
 [official Serf RPC docs](http://www.serfdom.io/docs/agent/rpc.html).
